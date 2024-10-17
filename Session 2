@@ -1,1 +1,9 @@
-
+first_number = (float(3.0 + 4.0))
+print(first_number)
+print(type(first_number))
+se_number = 8 - 5
+print(se_number)
+print(type(se_number))
+th_number = 7.5 * 6
+print(th_number)
+print(type(th_number))
