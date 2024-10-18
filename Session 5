@@ -1,1 +1,29 @@
+import math
+def sin_function():
+    start = 0
+    end = 2
+    each = (end - start) / 1000
 
+    table = []
+
+    for i in range(1000):
+
+        x = start + i * each
+        sin_x = math.sin(x)
+        table.append((x,sin_x))
+
+    return table
+
+def print_sin_table(table):
+    print(f"{'x'} {'sin(x)'}")
+
+    for x, sin_x in table:
+        print(f"{x} {sin_x}")
+
+def main():
+    sin_table = sin_function()
+
+    print_sin_table(sin_table)
+
+if __name__ == "__main__":
+    main()
