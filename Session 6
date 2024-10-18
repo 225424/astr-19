@@ -1,1 +1,39 @@
+import math
+def sin_function():
+    sin_start = 0
+    sin_end = 2
+    sin_each = (sin_end - sin_start) / 1000
+    return sin_start, sin_each
 
+def cos_function():
+    cos_start = 0
+    cos_end = 2
+    
+    cos_each = (cos_end - cos_start) / 1000
+    return cos_start, cos_each
+def tabulate():
+    sin_start, sin_each = sin_function()
+    cos_start, cos_each = cos_function()
+    table_sin = []
+    table_cos = []
+    for i in range(1000):
+        x = sin_start + i * sin_each
+        x1 = cos_start + 1 * cos_each
+        sin_x = math.sin(x)
+        cos_x = math.cos(x1)
+        table_sin.append((x,sin_x))
+        table_cos.append((x1,cos_x))
+    return table_sin, table_cos
+def print_table(table_sin, table_cos, num_values=10):
+    print(f"{'x'} {'sin(x)'} {'cos(x)'}")
+    for i in range(num_values):
+        x, sin_x = table_sin[i]
+        x1, cos_x = table_cos[i]
+        print(f"{x} {sin_x} {cos_x}")
+
+def main():
+    table_sin, table_cos = tabulate()
+    print_table(table_sin, table_cos)
+
+if __name__ == "__main__":
+    main()
