@@ -1,1 +1,22 @@
+class favorite_animal:
+    def __init__(self, arms_len, legs_len, num_of_eyes, tail, furry):
+        self.arms_len = arms_len
+        self.legs_len = legs_len
+        self.num_of_eyes = num_of_eyes
+        self.tail = tail
+        self.furry = furry
+    def describe(self):
+        print(f"arms_len: {self.arms_len}")
+        print(f"legs_len: {self.legs_len}")
+        print(f"num_of_eyes: {self.num_of_eyes}")
+        if self.tail == True:
+            print("tail: have tail")
+        elif self.tail == False:
+            print("tail: do not have tail")
+        if self.furry == True:
+            print("furry: have furry")
+        elif self.furry == False:
+            print("furry: do not have furry")
+squirrel = favorite_animal("2 inch","3 inch", 2, True, True)
 
+squirrel.describe()
