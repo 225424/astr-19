@@ -1,16 +1,18 @@
 import math
+#This is the define of sin function
 def sin_function():
     sin_start = 0
     sin_end = 2
     sin_each = (sin_end - sin_start) / 1000
     return sin_start, sin_each
-
+#This is the define of cos function
 def cos_function():
     cos_start = 0
     cos_end = 2
     
     cos_each = (cos_end - cos_start) / 1000
     return cos_start, cos_each
+#This function is for tabulate sin(x) and cos(x)
 def tabulate():
     sin_start, sin_each = sin_function()
     cos_start, cos_each = cos_function()
